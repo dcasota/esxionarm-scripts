@@ -1,3 +1,4 @@
+![ESXiOnArmWithWindows11PreviewVM](https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/esxionarm_w11.png)
 # Windows 11 virtual machine on ESXi on Arm on a Raspberry Pi 4B
 This is a step-by-step guide how to install a Microsoft Windows 11 virtual machine on ESXi on Arm on a Raspberry Pi 4B.
 For ESXi on Arm on a Raspberry Pi 4B have a look to the main chapter.
