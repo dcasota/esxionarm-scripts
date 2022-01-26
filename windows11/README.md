@@ -9,7 +9,7 @@ Not sure why, but the recipes and drivers of 3rd party vendors the all didn't wo
 https://rpi4-uefi.dev/windows-10-drivers/, https://github.com/worproject/RPi-Windows-Drivers, https://github.com/SuperJMN/Deployer  
 In addition, Windows 11 ISO setup on ESXi on Arm v1.8 does not start successfully.
 
-A functioning, networkless setup is first to install a Windows 10 virtual machine, and do an inplace update to windows 11 afterwards.
+For a functioning, but networkless setup first install a Windows 10 virtual machine, and then do an inplace update to windows 11.
 
 # Setting up the ISOs
 Windows 11 on Arm64 is available as preview, see https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64.
