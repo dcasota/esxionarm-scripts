@@ -41,7 +41,8 @@ Do use the configuration options of 'no network'.
 
 # In-Place update to Windows 11
 
-In the registry create following entries:
+In the registry create following entries:  
+```
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup\AllowUpgradesWithUnsupportedTPMOrCPU, type dword32, value 1
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig
@@ -50,6 +51,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig\BypassSecureBootCheck, type dword32, v
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig\BypassRAMCheck, type dword32, value 1
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig\BypassStorageCheck, type dword32, value 1
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig\BypassCPUCheck, type dword32, value 1
+```
 
 Detach the Windows 10 ISO, and attach the Windows 11 ISO.
 In the vm, go to the CD/DVD drive, and start in \sources\setup.exe.
