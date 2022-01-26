@@ -3,10 +3,10 @@ This is a step-by-step guide how to install a Microsoft Windows 11 virtual machi
 For ESXi on Arm on a Raspberry Pi 4B have a look to the main chapter.
 
 January 2022:
-Windows 10 and Windows 11 arm64 on ESXi on a raspberry pi4 hardware actually do not have built-in driver support for network adapter, graphic card, mouse, etc.
-There are no VMware Tools aarch64 for Microsoft Windows arm64.
-Not sure why, but the recipes and drivers of 3rd party vendors the all didn't work with the downloaded ISO. Here the links just in case:
-https://rpi4-uefi.dev/windows-10-drivers/, https://github.com/worproject/RPi-Windows-Drivers, https://github.com/SuperJMN/Deployer
+Actually, Windows 10 and Windows 11 arm64 on ESXi on a raspberry pi4 hardware do not include driver support for network adapter, graphic card, mouse, etc.
+There are no VMware Tools aarch64 for Microsoft Windows arm64.  
+Not sure why, but the recipes and drivers of 3rd party vendors the all didn't work with the downloaded ISO. Here the links just in case:  
+https://rpi4-uefi.dev/windows-10-drivers/, https://github.com/worproject/RPi-Windows-Drivers, https://github.com/SuperJMN/Deployer  
 In addition, Windows 11 ISO setup on ESXi on Arm v1.8 does not start successfully.
 
 A functioning, networkless setup is first to install a Windows 10 virtual machine, and do an inplace update to windows 11 afterwards.
