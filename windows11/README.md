@@ -59,3 +59,4 @@ Choose customize during the presetup phase.
 
 # Post configuration
 
+Download and install [7-zip 64-bit Windows arm64](7-zip.org).
