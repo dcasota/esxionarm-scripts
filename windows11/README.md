@@ -41,7 +41,7 @@ Do use the configuration options of 'no network'.
 
 # In-Place update to Windows 11
 
-In the registry create following entries:  
+In windows registry add following entries:  
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup\AllowUpgradesWithUnsupportedTPMOrCPU, type dword32, value 1
