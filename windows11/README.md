@@ -78,6 +78,7 @@ Enter a user name, password and security questions.
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_7.png" width="400" height="300"><p/>
 
 Configure the privacy settings.
+<p/>
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_8.png" width="400" height="300">
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_9.png" width="400" height="300"><p/>
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_10.png" width="400" height="300">
@@ -86,6 +87,7 @@ Configure the privacy settings.
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_13.png" width="400" height="300"><p/>
 
 That's it. The Windows 11 desktop screen appears.
+<p/>
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_14.png" width="400" height="300">
 
 # Post configuration
