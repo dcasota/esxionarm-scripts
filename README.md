@@ -1,7 +1,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/14890243/151339098-f9da9453-b3f9-4f00-939a-802f17793f4b.png" width="300" height="200"></p>
     
 # What is ESXi-on-Arm scripts ?
-This repo contains a bunch of ESXi-on-Arm related homelab scripts.
+This repo is dedicated to ESXi-on-Arm related homelab tinkering.
 ESXi on Arm is a VMware project name for a hypervisor system. It runs ESXi on arm64 processors eg. on Raspberry Pi hardware. See https://flings.vmware.com/esxi-arm-edition.
 
 # Setting up the hardware
