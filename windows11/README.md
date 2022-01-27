@@ -13,15 +13,17 @@ In addition, Windows 11 ISO setup on ESXi on Arm v1.8 does not start successfull
 For a functioning, but networkless setup first install a Windows 10 virtual machine, and then do an inplace update to Windows 11.
 
 # Download the ISOs
+As a partner or customer, download the ISOs from Microsoft Volume Licensing Service Center.
+For homelab learning purposes you can additionally register for Microsoft insider previews.
 
 ## Microsoft Volume Licensing Service Center
 Download the ISOs from Microsoft Volume Licensing Service Center or MSDN. Copy both ISO (Windows 10 and Windows 11) to an ESXi datastore.
 
 ## Microsoft insider previews
 Windows 11 on Arm64 is available as a Microsoft insider preview, see https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64.
-The download bits as .vhdx image format isn't supported on ESXi on Arm, hence you must convert it eg. to an ISO.
+The .vhdx image format isn't supported on ESXi on Arm, hence you must additionally convert it eg. to an ISO.
 
-Microsoft insider previews have a long run, and a while ago the third-party service uupdump.net came up. It allows to download a slipstreamed ISO with patches, drivers, etc. in a user-friendly way.  
+Microsoft insider previews have a long run, and a while ago the third-party service uupdump.net came up. It allows to download a slipstreamed ISO with drivers, patches, etc.
 Enter "windows 11 arm64" on the search bar, specify arm64 as architecture and specify to download the content as ISO. You will download a zip file eg. 22538.1000_arm64_en-us_professional_5813c380_convert.zip. Unzip it.
 Now start uup_download_windows.cmd, or uup_download_macos.sh or uupd_download_linux.sh.
 The script takes a while, but at the end you get a dynamically created ISO eg. 22538.1000.220114-1500.RS_PRERELEASE_CLIENTPRO_OEMRET_A64FRE_EN-US.ISO.
