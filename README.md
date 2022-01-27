@@ -10,14 +10,12 @@ Actually this content is solely related to Raspberry Pi 4B hardware.
 ## Hardware
 
 Bill of material
-- 1x RPi 4B
+- 1x RPi 4B, micro hdmi attached monitor, keyboard, network attached
 - 1x 32GB microSD for the RPI4 uefi firmware
 - 1x 32GB usb stick for the arm64 ESXi install bits
-- 1x 128 GB usb stick for the arm64 ESXi installation
-- 1x 1 TB usb stick with an existing vmfs6 datastore
-- network cable, connectivity eg. to a laptop with installed web browser
-- micro hdmi attached monitor
-- keyboard
+- 1x 128GB usb stick for the arm64 ESXi installation
+- 1x 1TB usb stick with an existing vmfs6 datastore
+
 
 ## UEFI firmware preparation
 
@@ -115,5 +113,5 @@ Installation Result
 # Virtual Machines
 Go to the following chapters.
 - [arm64 Microsoft Windows 11](https://github.com/dcasota/esxionarm-scripts/tree/main/windows11)
-- arm64 VMware Photon OS 4 rev2
+- arm64 VMware Photon OS 4 rev2 (todo)
 
