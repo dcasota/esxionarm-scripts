@@ -58,6 +58,36 @@ Detach the Windows 10 ISO, and attach the Windows 11 ISO.
 In the vm, go to the CD/DVD drive, and start in \sources\setup.exe.
 Choose customize during the presetup phase.
 
+# Windows 11 setup
+
+The Windows 11 setup is pretty straight forward.
+
+Choose region and keyboard layout.
+<p/>
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_1.png" width="400" height="300"><p/>
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_2.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_3.png" width="400" height="300"><p/>
+
+In this setup, Windows 11 is used without network connectivity. Choose continue with limited setup.
+Enter a user name, password and security questions.
+<p/>
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_4.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_5.png" width="400" height="300"><p/>
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_6.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_7.png" width="400" height="300"><p/>
+
+Configure the privacy settings.
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_8.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_9.png" width="400" height="300"><p/>
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_10.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_11.png" width="400" height="300"><p/>
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_12.png" width="400" height="300">
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_13.png" width="400" height="300"><p/>
+
+That's it. The Windows 11 desktop screen appears.
+<img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_14.png" width="400" height="300">
+
 # Post configuration
 
 Download and install [7-zip 64-bit Windows arm64](7-zip.org).
