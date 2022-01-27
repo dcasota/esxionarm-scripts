@@ -13,7 +13,7 @@ In addition, Windows 11 ISO setup on ESXi on Arm v1.8 does not start successfull
 For a functioning, but networkless setup first install a Windows 10 virtual machine, and then do an inplace update to Windows 11.
 
 # Download the ISOs
-As a partner or customer, download the ISOs from Microsoft Volume Licensing Service Center.
+As a partner or customer, download the ISOs from Microsoft Volume Licensing Service Center.  
 For homelab learning purposes you can additionally register for Microsoft insider previews.
 
 ## Microsoft Volume Licensing Service Center
