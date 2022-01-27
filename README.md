@@ -1,9 +1,11 @@
+<p align="center"><img src="https://user-images.githubusercontent.com/14890243/151339098-f9da9453-b3f9-4f00-939a-802f17793f4b.png" width="300" height="200"></p>
+    
 # What is ESXi-on-Arm scripts ?
 This repo contains a bunch of ESXi-on-Arm related scripts.
-ESXi on Arm is a VMware hypervisor system. It runs on arm64 processors eg. on Raspberry Pi hardware. See https://flings.vmware.com/esxi-arm-edition.
+ESXi on Arm is a project name for a VMware hypervisor system. It runs ESXi on arm64 processors eg. on Raspberry Pi hardware. See https://flings.vmware.com/esxi-arm-edition.
 
 # Setting up the hardware
-Actually the content is solely related to Raspberry Pi 4B hardware.
+Actually this content is solely related to Raspberry Pi 4B hardware.
 
 ## Hardware
 Assembled 1x RPi4 8GB, 1x 32GB microSD, 1x 1TB usb stick, 1x 128GB usb stick, 1x 32GB usb stick
@@ -22,6 +24,7 @@ Start RPi Imager > own image > select RPi4_UEFI_Firmware_{release}.zip, write on
 In your RPi4, plugin now the microSD.
 
 ## ESXi on Arm ISO preparation
+
 
 Download the esxi-on-arm ISO from https://flings.vmware.com/esxi-arm-edition.
 
@@ -62,6 +65,36 @@ ntpq -p
 partedUtil getptbl /dev/disks <your vml.id>
 ```
 The ```<vml.id>``` must contain the id which can be found by analyzing the output from ```ls /dev/disks```.
+
+## Configure native GPIO driver for ESXi-Arm on Raspberry Pi
+There is a community supported solution. Download from URL https://github.com/thebel1/thgpio and copy the .vib to your datastore eg. /vmfs/volumes/sandisk.
+```
+[root@localhost:~] esxcli software acceptance set --level=CommunitySupported
+Host acceptance level changed to 'CommunitySupported'.
+[root@localhost:~] esxcli software vib install -v /vmfs/volumes/sandisk/thgpio-0.1.0-1OEM.701.1.0.40650718.aarch64.vib
+Installation Result
+   Message: Operation finished successfully.
+   Reboot Required: false
+   VIBs Installed: THX_bootbank_thgpio_0.1.0-1OEM.701.1.0.40650718
+   VIBs Removed:
+   VIBs Skipped:
+[root@localhost:~]
+```
+
+## Configure native hardware status driver for ESXi-Arm on Raspberry Pi
+There is a community supported solution. Download from URL https://github.com/thebel1/thpimon and copy the .vib to your datastore eg. /vmfs/volumes/sandisk.
+```
+[root@localhost:~] esxcli software acceptance set --level=CommunitySupported
+Host acceptance level changed to 'CommunitySupported'.
+[root@localhost:~] esxcli software vib install -v /vmfs/volumes/sandisk/thgpio-0.1.0-1OEM.701.1.0.40650718.aarch64.vib
+Installation Result
+   Message: Operation finished successfully.
+   Reboot Required: false
+   VIBs Installed: THX_bootbank_thgpio_0.1.0-1OEM.701.1.0.40650718
+   VIBs Removed:
+   VIBs Skipped:
+[root@localhost:~]
+```
 
 # Virtual Machines
 Go to the following chapters.
