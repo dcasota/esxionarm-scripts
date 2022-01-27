@@ -17,7 +17,7 @@ Bill of material
 - network cable, connectivity eg. to a laptop with installed web browser
 - micro hdmi attached monitor
 - keyboard
-- power
+- rpi4 power supply
 
 ## UEFI firmware preparation
 
