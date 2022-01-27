@@ -10,6 +10,7 @@ Actually this content is solely related to Raspberry Pi 4B hardware.
 ## Hardware
 
 Bill of material
+- 1x RPi 4B
 - 1x 32GB microSD for the RPI4 uefi firmware
 - 1x 32GB usb stick for the arm64 ESXi install bits
 - 1x 128 GB usb stick for the arm64 ESXi installation
@@ -17,7 +18,6 @@ Bill of material
 - network cable, connectivity eg. to a laptop with installed web browser
 - micro hdmi attached monitor
 - keyboard
-- rpi4 power supply
 
 ## UEFI firmware preparation
 
