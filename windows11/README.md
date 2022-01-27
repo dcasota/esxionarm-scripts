@@ -1,6 +1,6 @@
 ![ESXiOnArmWithWindows11PreviewVM](https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/esxionarm_w11.png)
 # Windows 11 virtual machine on ESXi on Arm on a Raspberry Pi 4B
-This is a step-by-step guide how to install a Microsoft Windows 11 virtual machine on ESXi on Arm on a Raspberry Pi 4B.
+This homelab guide explains how to install a Microsoft Windows 11 virtual machine on ESXi on Arm on a Raspberry Pi 4B.
 For ESXi on Arm on a Raspberry Pi 4B have a look to the main chapter.
 
 January 2022:
@@ -10,25 +10,26 @@ Not sure why, but the recipes and drivers of 3rd party vendors the all didn't wo
 https://rpi4-uefi.dev/windows-10-drivers/, https://github.com/worproject/RPi-Windows-Drivers, https://github.com/SuperJMN/Deployer  
 In addition, Windows 11 ISO setup on ESXi on Arm v1.8 does not start successfully.
 
-For a functioning, but networkless setup first install a Windows 10 virtual machine, and then do an inplace update to windows 11.
+For a functioning, but networkless setup first install a Windows 10 virtual machine, and then do an inplace update to Windows 11.
 
 # Setting up the ISOs
-Windows 11 on Arm64 is available as preview, see https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64.
-The download bits as .vhdx image format isn't supported on ESXi on Arm, hence we cannot use this download method.
+Download the ISOs from Microsoft Volume Licensing Service Center or MSDN. Copy both ISO (Windows 10 and Windows 11) to an ESXi datastore.
 
-Go to [uupdump.net], enter "windows 10 arm64" on the search bar, specify arm64 as architecture and specify to download the content as ISO.
+Windows 11 on Arm64 is available as a Microsoft insider preview, see https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64.
+The download bits as .vhdx image format isn't supported on ESXi on Arm, hence you must convert it eg. to an ISO.
+
+Microsoft insider previews have a long run, and a while ago the third-party service uupdump.net came up. It allows to download a slipstreamed ISO with patches, drivers, etc. in a user-friendly way.  
+Enter "windows 11 arm64" on the search bar, specify arm64 as architecture and specify to download the content as ISO. You will download a zip file eg. 22538.1000_arm64_en-us_professional_5813c380_convert.zip. Unzip it.
+Now start uup_download_windows.cmd, or uup_download_macos.sh or uupd_download_linux.sh.
+The script takes a while, but at the end you get a dynamically created ISO eg. 22538.1000.220114-1500.RS_PRERELEASE_CLIENTPRO_OEMRET_A64FRE_EN-US.ISO.
+
+Next, enter "windows 10 arm64" on the search bar, specify arm64 as architecture and specify to download the content as ISO.
 You will download a zip file eg. 19044.1499_arm64_en-us_professional_55c91dc2_convert.zip. Unzip it.
 Now start uup_download_windows.cmd, or uup_download_macos.sh or uupd_download_linux.sh.
-The script takes a while, but at the end you get a dynamically created ISO eg. 19041.1.191206-1406.VB_RELEASE_CLIENTPRO_OEMRET_A64FRE_EN-US.ISO.
+The script again takes a while, but at the end you get a dynamically created ISO eg. 19041.1.191206-1406.VB_RELEASE_CLIENTPRO_OEMRET_A64FRE_EN-US.ISO.
 
-Now do the same with "windows 11 arm64". You will download a zip file eg. 22538.1000_arm64_en-us_professional_5813c380_convert.zip. Unzip it.
-Now start uup_download_windows.cmd, or uup_download_macos.sh or uupd_download_linux.sh.
-The script takes again a while, but at the end you get a dynamically created ISO eg. 22538.1000.220114-1500.RS_PRERELEASE_CLIENTPRO_OEMRET_A64FRE_EN-US.ISO.
-
-Windows 11 arm64 wouldn't start because of compatibility checks.
-To have a modified Windows 11 installation ISO to bypass compatibility checks both pre and post installation, see https://github.com/JosephM101/Force-Windows-11-Install.
-
-Copy both ISO to an ESXi datastore.
+It can occur that a build of arm64 Windows doesn't start because of missing hardware support. Check if the hardware is supported. Eg. Raspberry Pi4 is not officially supported.
+In addition for Windows 11, there are eg. TPM compatibility checks.
 
 # Create and start the Windows guest virtual machine
 The specs are:
