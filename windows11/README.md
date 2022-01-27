@@ -91,6 +91,3 @@ That's it. The Windows 11 desktop screen appears.
 <p/>
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_14.png" width="400" height="300">
 
-# Post configuration
-
-Download and install [7-zip 64-bit Windows arm64](7-zip.org).
