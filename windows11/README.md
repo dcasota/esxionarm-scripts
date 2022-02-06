@@ -96,3 +96,11 @@ That's it. The Windows 11 desktop screen appears.
 <p/>
 <img src="https://github.com/dcasota/esxionarm-scripts/blob/main/windows11/pics/w11_14.png" width="400" height="300">
 
+
+# device drivers
+
+Actually arm64 Windows 11 does not recognize all of the underlying virtual hardware. The drivers found so far
+- unsupported, not digitally signed vmxnet3 network adapter
+
+## Installing vmxnet3 network adapter
+
