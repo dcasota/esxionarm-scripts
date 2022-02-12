@@ -103,4 +103,13 @@ Actually arm64 Windows 11 does not recognize all of the underlying virtual hardw
 - unsupported, not digitally signed vmxnet3 network adapter
 
 ## Installing vmxnet3 network adapter
+First of all, again, all these homelab scripts are not for a productive environment. Use them at your own risk. This blog article https://virtuallyfun.com/wordpress/2021/06/08/running-vmware-esxi-on-raspberry-pi/  provides a link to a software archive which contains a vmxnet3_arm64.iso.lz file. The ISO contains VMware files which were obviously modified to make them work on arm64 windows. The drivers are unsigned. Hence, to install the unsigned arm64 windows driver, follow the instruction https://docs.microsoft.com/en-us/windows-hardware/drivers/install/installing-an-unsigned-driver-during-development-and-test, then install the vmxnet3 driver.
+
+![vmxnet3](https://user-images.githubusercontent.com/14890243/153703127-25c992af-b15b-4439-9e3f-4d18ce32d4f6.png)
+
+### Findings 12th February 2022
+The WDK vmxnet3 driver provides network connectivity. Windows 11 gets an ip address, and components like Windows Updates seem to work flawlessly.
+![Windows Updates](https://user-images.githubusercontent.com/14890243/153703252-3ddc06ff-a10d-4282-87fb-41755d3725dd.png)
+
+Copying larger files using a remote desktop connection from a x86_64 client by locally attached drives isn't stable. Typically through mstsc, you can copy files into the rdp session through \\tsclient\<your attached drive>. All tests failed using windows explorer, robocopy, etc. Copying smaller files does work though.
 
