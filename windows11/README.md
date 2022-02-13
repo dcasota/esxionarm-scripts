@@ -113,3 +113,13 @@ The WDK vmxnet3 driver provides network connectivity. Windows 11 gets an ip addr
 
 Copying larger files using a remote desktop connection from a x86_64 client by locally attached drives isn't stable. Typically through mstsc, you can copy files into the rdp session through \\tsclient\<your attached drive>. All tests failed using windows explorer, robocopy, etc. Copying smaller files does work though.
 
+A good option for me is copying large files using aarch64 VMware Photon OS 4.0 rev2 with installed ntfs-3g. The procedure is simple:
+- shutdown the Windows 11 vm
+- attach the vmdk to the configured Photon OS vm
+- mounted the vmdk using ntfs-3g
+- copy the files you want
+- dismount the vmdk and shutdown the Photon OS vm
+- Start the windows 11 vm. Now you have the files on your test windows vm.
+
+
+
