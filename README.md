@@ -71,7 +71,7 @@ In my scenario, the 1TB usb stick contains an existing vmfs6 datastore. It isn't
 /etc/init.d/ntpd restart
 ntpq -p
 /etc/init.d/usbarbitrator stop
-partedUtil getptbl /dev/disks <your vml.id>
+partedUtil getptbl /dev/disks/<your vml.id>
 ```
 The ```<vml.id>``` must contain the id which can be found by analyzing the output from ```ls /dev/disks```.
 
