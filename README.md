@@ -2,7 +2,7 @@
     
 # What is ESXi-on-Arm scripts ?
 This repo is dedicated to ESXi-on-Arm related homelab tinkering.
-ESXi on Arm is a VMware project name for a hypervisor system. It runs ESXi on arm64 processors eg. on Raspberry Pi hardware. See https://flings.vmware.com/esxi-arm-edition.
+ESXi on Arm is a VMware project name for a hypervisor system. It runs ESXi on arm64 processors eg. on Raspberry Pi hardware.
 
 # Setting up the hardware
 Actually this content is solely related to Raspberry Pi 4B hardware.
@@ -31,7 +31,8 @@ In your RPi4, plugin now the microSD.
 
 ## ESXi on Arm ISO preparation
 
-Download the esxi-on-arm ISO from https://flings.vmware.com/esxi-arm-edition.
+Download the esxi-on-arm ISO from the [Broadcom Flings webpage](https://support.broadcom.com/group/ecx/productdownloads?subfamily=Flings&freeDownloads=true).
+<img width="2573" height="452" alt="image" src="https://github.com/user-attachments/assets/374dba77-c433-472b-bb79-db337fee21c0" />
 
 Download a tool to write the ISO file to the usb stick eg. rufus.
 
